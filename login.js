@@ -41,7 +41,9 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     message.textContent = 'Logging in...';
 
     try {
-        const response = await fetch('/api/login', {
+        const response = await fetch(
+    'https://rltiers.zainiscool-comcom.workers.dev/api/login',
+    {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
