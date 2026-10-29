@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d1d">
+  <title>Admin Dashboard | RLTiers</title>
+  <link rel="stylesheet" href="/admin.css">
+  <script src="/admin.js" defer></script>
+</head>
+<body>
+  <div class="background-glow glow-one" aria-hidden="true"></div>
+  <div class="background-glow glow-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="RLTiers home">
+      <span class="brand-mark">RL</span><span class="brand-copy"><strong>RLTiers</strong><small>ADMIN CONSOLE</small></span>
+    </a>
+    <nav class="topbar-actions" aria-label="Main navigation">
+      <a class="topbar-link" href="/leaderboard.html">LeaderBoard <span aria-hidden="true">↗</span></a>
+      <button id="logout-button" class="button button-quiet" type="button">Log out</button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow"><span class="status-dot"></span> CONTROL CENTER</p>
+        <h1>Admin <span>Dashboard</span></h1>
+        <p class="page-description">Manage RLTiers accounts, permissions, and leaderboard points.</p>
+      </div>
+      <div class="heading-actions">
+        <button id="refresh-button" class="button button-secondary" type="button"><span class="button-icon" aria-hidden="true">↻</span> Refresh data</button>
+        <button id="create-account-button" class="button button-primary" type="button"><span class="button-icon" aria-hidden="true">＋</span> Create account</button>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Account statistics">
+      <article class="stat-card"><div class="stat-topline"><span class="stat-label">Total accounts</span><span class="stat-icon violet" aria-hidden="true">♙</span></div><p id="total-players" class="stat-value">—</p><p class="stat-caption">Registered RLTiers players</p></article>
+      <article class="stat-card"><div class="stat-topline"><span class="stat-label">Administrators</span><span class="stat-icon pink" aria-hidden="true">◆</span></div><p id="total-admins" class="stat-value">—</p><p class="stat-caption">Accounts with admin access</p></article>
+      <article class="stat-card"><div class="stat-topline"><span class="stat-label">Total points</span><span class="stat-icon blue" aria-hidden="true">✦</span></div><p id="total-points" class="stat-value">—</p><p class="stat-caption">Combined leaderboard points</p></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading"><div><h2>Account management</h2><p>Search players and manage their accounts.</p></div><span id="player-count" class="count-pill">Loading…</span></div>
+      <div class="toolbar">
+        <label class="search-box" for="search-input"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search usernames…" autocomplete="off"></label>
+        <label class="filter-wrap" for="role-filter"><span>Role</span><select id="role-filter"><option value="all">All accounts</option><option value="admin">Admins only</option><option value="player">Players only</option></select></label>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Account</th><th scope="col">Tier</th><th scope="col">Points</th><th scope="col">Role</th><th scope="col" class="actions-heading">Actions</th></tr></thead><tbody id="players-table"><tr><td class="table-message" colspan="5">Loading accounts…</td></tr></tbody></table></div>
+      <div class="panel-footer"><span class="footer-dot" aria-hidden="true"></span><span id="table-status" role="status" aria-live="polite">Waiting for account data…</span></div>
+    </section>
+    <p class="security-note"><span aria-hidden="true">◇</span> Admin actions must be validated by the server. Keep your administrator password private.</p>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+  </main>
+
+
+        <footer class="page-footer">
+            <span>RLTiers Admin Control Center</span>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings | RLTiers</title>
+    <link rel="stylesheet" href="/account.css">
+</head>
+<body>
+    <div id="background-waves" aria-hidden="true"></div>
+    <div id="particles" aria-hidden="true"></div>
+    <div id="bottom-smoke" aria-hidden="true"></div>
+
+    <main class="account-page">
+        <a href="/leaderboard" class="back-link">
+            ← Back to Leaderboard
+        </a>
+
+        <header class="page-header">
+            <h1>Account Settings</h1>
+            <p>Manage your RLTiers account.</p>
+        </header>
+
+        <section class="settings-card" aria-labelledby="profile-heading">
+            <h2 id="profile-heading">Profile</h2>
+
+            <div class="profile-row">
+                <div id="profile-picture" class="profile-picture"
+                     role="img" aria-label="Default profile picture">
+                    <span aria-hidden="true">?</span>
+                </div>
+
+                <div class="profile-info">
+                    <h3 id="account-username">Loading account...</h3>
+                    <p>RLTiers member</p>
+                </div>
+            </div>
+
+            <div class="setting-option">
+                <div>
+                    <div class="setting-option avatar-setting">
+    <div>
+        <h3>Profile Picture</h3>
+        <p>PNG, JPEG, or WebP. Maximum size: 2 MB.</p>
+    </div>
+
+    <input
+        id="avatar-file"
+        type="file"
+        accept="image/png,image/jpeg,image/webp"
+        hidden
+    >
+
+    <div class="avatar-actions">
+        <button id="choose-avatar-button" type="button">
+            Choose Picture
+        </button>
+
+        <button id="remove-avatar-button" type="button" hidden>
+            Remove Picture
+        </button>
+    </div>
+</div>
+
+<div id="avatar-preview-container" hidden>
+    <p>Preview</p>
+    <img id="avatar-preview" alt="Profile picture preview">
+    <button id="save-avatar-button" type="button">
+        Save Picture
+    </button>
+    <button id="cancel-avatar-button" type="button">
+        Cancel
+    </button>
+</div>
+
+<p id="avatar-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="settings-card" aria-labelledby="password-heading">
+            <h2 id="password-heading">Security</h2>
+
+            <form id="password-form">
+                <label for="current-password">Current password</label>
+                <input
+                    id="current-password"
+                    name="currentPassword"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <label for="new-password">New password</label>
+                <input
+                    id="new-password"
+                    name="newPassword"
+                    type="password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    maxlength="128"
+                    required
+                >
+
+                <p class="field-hint">
+                    Use at least 8 characters. Passwords are limited to
+                    72 UTF-8 bytes for compatibility with bcrypt.
+                </p>
+
+                <label for="confirm-password">Confirm new password</label>
+                <input
+                    id="confirm-password"
+                    name="confirmPassword"
+                    type="password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    maxlength="128"
+                    required
+                >
+
+                <p id="password-message" role="status"
+                   aria-live="polite"></p>
+
+                <button id="change-password-button" type="submit">
+                    Change Password
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <script src="/account.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+
+#RLogin {
+    animation: LoginAni 1.9s ease-out forwards;
+    position: absolute;
+    size: 100px;
+    top: 100px;
+    text-align: center;
+}
+
+
+@keyframes LoginAni {
+    from {
+        transform: translateY(20vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+
+    from {
+    opacity: 0;
+    filter: blur(100px);
+}
+
+to {
+    opacity: 1;
+    filter: blur(0);
+}
+}
+ 
+ 
+ 
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #0B0B14;
+    color: white;
+}
+
+#loginForm {
+    width: 350px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: #12121f;
+    border: 1px solid #a855f7;
+    border-radius: 30px;
+
+    box-shadow: 0 0 30px #a855f733;
+
+    animation: appear 0.8s ease-out;
+}
+
+h1 {
+    position: absolute;
+    top: calc(50% - 210px);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 15px #a855f7;
+}
+
+input {
+    padding: 13px;
+    border: 1px solid #45405a;
+    border-radius: 999px;
+    outline: none;
+
+    background: #0B0B14;
+    color: white;
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #c084fc;
+    box-shadow: 0 0 12px #a855f755;
+}
+
+button {
+    padding: 13px;
+    border: 1px solid #c084fc;
+    border-radius: 999px;
+
+    background: #a855f7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #9333ea;
+    box-shadow: 0 0 18px #a855f7aa;
+    transform: translateY(-2px);
+}
+
+#message {
+    margin: 0;
+    text-align: center;
+    color: #c084fc;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+body{
+    font-family: Verdana;
+    font-size: 0.9999999em;
+    background-color: #0B0B14;
+    color: white;
+}
+
+body {
+    background: radial-gradient(
+        circle at 50% 35%,
+        #301050 0%,
+        #0B0B14 55%,
+        #000000 100%
+    );
+    min-height: 100vh;
+    margin: 0;
+}
+
+#background-waves {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 20% 40%,
+            #47147755 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 65%,
+            #32105A66 0%, transparent 50%);
+    filter: blur(35px);
+}
+
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #c084fc;
+    box-shadow: 0 0 10px #c084fc;
+    animation: drift 8s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(45px, -30px);
+    }
+}
+
+.particle-two {
+    top: 65%;
+    left: 75%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 12s;
+    animation-delay: -4s;
+}
+
+
+.particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #c084fc;
+    box-shadow: 0 0 10px #c084fc;   
+    z-index: 10;
+}
+
+
+#bottom-smoke {
+    position: fixed;
+    left: -15%;
+    bottom: -130px;
+    width: 130%;
+    height: 430px;
+
+    background:
+        radial-gradient(ellipse at 12% 85%,
+            #a855f744 0%, transparent 38%),
+        radial-gradient(ellipse at 28% 65%,
+            #7e22ce33 0%, transparent 28%),
+        radial-gradient(ellipse at 43% 100%,
+            #c084fc55 0%, transparent 35%),
+        radial-gradient(ellipse at 57% 72%,
+            #9333ea22 0%, transparent 32%),
+        radial-gradient(ellipse at 72% 90%,
+            #a855f744 0%, transparent 40%),
+        radial-gradient(ellipse at 91% 70%,
+            #7e22ce33 0%, transparent 30%);
+
+    opacity: 0.25;
+    filter: blur(28px);
+    pointer-events: none;
+    z-index: 5;
+
+    animation: smokeDrift 18s ease-in-out infinite alternate;
+}
+

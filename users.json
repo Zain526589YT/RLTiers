@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "username": "Zain526589YT",
+            "passwordHash": "$2b$12$UaoUh/8ggTCvywaau8xjyOD3BHY5m.eMgfZNMRiaDQHO6LsLdhXAW",
+            "isAdmin": true
+        },
+        {
+            "username": "Leon",
+            "passwordHash": "$2b$12$nAFVT3bvdjIR3EsuRoLxrOoJ8cRILgJF3nVQG1NvwqjCfsdOfSjsm",
+            "isAdmin": false
+        },
+        {
+            "username": "Mylo",
+            "passwordHash": "$2b$12$jZWFn21lv36Pfv/2WadQIuLdZ8fO8sB7owdP56m5n7GLoms5mcK22",
+            "isAdmin": false
+        },
+        {
+            "username": "Dayo",
+            "passwordHash": "$2b$12$CfaFHPahS.SHW3TT2I8nOeiBjcLy4GbUVG6gf8u2u.75l3oIG2R0W",
+            "isAdmin": false
+        },
+        {
+            "username": "Max",
+            "passwordHash": "$2b$12$NtmHZM6dS.Pw1upthRQfUuvPfS1d0tecgFsjQ9FR1eDWGkiPQeLN.",
+            "isAdmin": false
+        },
+        {
+            "username": "Elias",
+            "passwordHash": "$2b$12$6CJiSo6JuEFIfmuJzBiApeq4qdiNaN6WCVKe1iThUfsUJ7e.XUBcK",
+            "isAdmin": false
+        },
+        {
+            "username": "Marten",
+            "passwordHash": "$2b$12$oBDMjkpy9tF2gdN8Caumfeb47IrNuRwRMV8Tn/9fcbNIXApY7fAsS",
+            "isAdmin": false
+        }
+    ]
+}
