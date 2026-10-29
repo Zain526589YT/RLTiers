@@ -58,7 +58,7 @@ const result = await response.json();
 
    if (response.ok) {
         message.textContent = 'Login successful! :D';
-        window.location.href = '/leaderboard.html';
+        window.location.href = '/RLTiers/leaderboard.html';
         } else {
             message.textContent = result.message || 'Login failed.';
         }
